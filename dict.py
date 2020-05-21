@@ -21,7 +21,10 @@ while re == "y" or re == "yes":
     if result == None:#if there is no matching words in data.json
         print("Sorry no result found for this word\n please try something different")
     else:
-        print(result)
+        for meanings in result:
+            print("___________________________________________________________________")
+            print(word + " means:\t" + meanings + "\n") #This is just for good looks.
+            print("___________________________________________________________________")
         
     re = input("re-find (yes/no or y/n) :\t").lower()
 
